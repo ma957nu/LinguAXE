@@ -1,0 +1,21 @@
+1./equipos/máquina/hardware/disco[@tecnoloxía="SCSI"]
+
+2./equipos/máquina[config/IP='192.168.10.45']/config/OS
+
+3./equipos/máquina/hardware/procesador[@marca='AMD']/@velocidade
+
+4./equipos/máquina[@nome='COPERNICO']/config/text()
+
+5./equipos/máquina[tipo='Semitorre' and config/OS='Windows XP']
+
+6./equipos/máquina[hardware/memoria[@tecnoloxía='DDR2']='4']/hardware/fabricante/text()
+
+7./equipos/máquina[hardware/procesador/@num_nucleos]/config/OS/text()
+
+8./equipos/máquina[hardware/memoria/@tecnoloxía='DDR2']/@nome
+
+9./equipos/máquina[hardware/procesador/@marca='Intel' and hardware/gravadora/@tipo='DVD']
+
+10./equipos/máquina[config/gateway]/config
+
+
