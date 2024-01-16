@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE paneles [
+  <!ELEMENT paneles (evento+)>
+  <!ELEMENT evento (via, pk, retencion, sentido, carrilescortados?)>
+  <!ATTLIST evento
+  tipo CDATA #REQUIRED
+  fecha CDATA #IMPLIED>
+  <!ELEMENT via (nombre, ref, origen, destino, (doble | sentido), carriles)>
+  <!ELEMENT doble EMPTY>
+  <!ELEMENT sentido (#PCDATA)>
+  <!ELEMENT retencion EMPTY>
+  <!ATTLIST retencion
+  long CDATA #REQUIRED>
+  <!ELEMENT carrilescortados EMPTY>
+  <!ATTLIST carrilescortados
+  valor (1 | 2 | 3 | 4) #REQUIRED>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT ref (#PCDATA)>
+  <!ELEMENT origen (#PCDATA)>
+  <!ELEMENT destino (#PCDATA)>
+  <!ELEMENT carriles (#PCDATA)>
+  <!ELEMENT pk (#PCDATA)>
+]>
+
+<paneles>
+  <evento tipo="Accidente" fecha="2024-01-16">
+    <via>
+      <nombre>A-4</nombre>
+      <ref>KM 20</ref>
+      <origen>Sevilla</origen>
+      <destino>Madrid</destino>
+      <sentido>Norte</sentido>
+      <carriles>1 y 2</carriles>
+    </via>
+    <pk>20</pk>
+    <retencion long="5 km"/>
+    <carrilescortados valor="2"/>
+  </evento>
+  <evento tipo="Obras">
+    <via>
+      <nombre>AP-7</nombre>
+      <ref>KM 150</ref>
+      <origen>Barcelona</origen>
+      <destino>Valencia</destino>
+      <doble/>
+      <carriles>3 y 4</carriles>
+    </via>
+    <pk>150</pk>
+    <retencion long="2 km"/>
+  </evento>
+</paneles>
